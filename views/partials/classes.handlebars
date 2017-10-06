@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>E-Learner Classes</title>
+</head>
+<body>
+<h4 style="font-size: 40px; text-align: center;font-weight: normal;color: brown;"> Latest Classes</h4>
+<section id="classes">
+	
+	{{#each classes}}
+	<div class="col_4">
+		<h4>{{title}}</h4>
+		<p>{{description}}</p>
+		<a class="button" href="/classes/{{_id}}/details">View Class</a>
+	</div>
+	{{/each}}
+	
+	
+</section>
+</body>
+</html>
