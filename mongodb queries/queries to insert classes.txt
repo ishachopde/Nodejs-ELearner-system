@@ -1,3 +1,7 @@
-db.classes.insert({title: 'Learn Node.js', description: 'Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. 
-Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js package ecosystem, npm, 
-is the largest ecosystem of open source libraries in the world', instructor: 'ABC'});
+db.classes.insert({title: 'Learn Node.js', description: 'Node.js® is a JavaScript runtime built on Chrome V8 JavaScript engine.Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js package ecosystem, npm,is the largest ecosystem of open source libraries in the world', instructor: 'ABC'});
+
+
+db.classes.insert({title: 'Learn Angular2', description: 'Angular 2 is an open source JavaScript framework to build web applications in HTML and JavaScript. This tutorial looks at the various aspects of Angular 2 framework which includes the basics of the framework, the setup of Angular and how to work with the various aspects of the framework', instructor: 'PQR'});
+
+
+db.classes.insert({title: 'Learn React Native', description: 'React Native is a JavaScript framework for building native mobile apps. It uses the React framework and offers large amount of inbuilt components and APIs.', instructor: 'XYZ'});
