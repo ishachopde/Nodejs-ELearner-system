@@ -25,14 +25,8 @@
     "express-messages":"*",
     "express-validator":"*"
 
-  },
-    "engines":{
-    "node": "*"
-  },
-
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ishachopde/Nodejs-ELearner-system.git"
   }
+
+
 
 }

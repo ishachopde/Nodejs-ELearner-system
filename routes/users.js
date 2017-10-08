@@ -65,7 +65,8 @@ router.post('/register', function(req, res, next) {
     			console.log('Instructor created');
     		});
     	}
-    	request.flash('success', 'User Added');
+
+    	req.flash('success', 'User Added');
     	res.redirect('/');
 
     }
