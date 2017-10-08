@@ -32,42 +32,42 @@ router.post('/register', function(req, res, next) {
   req.checkBody('password2','passwords do not match').equals(req.body.password);
 
   errors = req.validationErrors();
-    if(errors) {
-     	res.render('users/register', {
-      		errors: errors
-      	});
-    } else{
-    		var  newUser = new User({
-    			email: email,
-    			username: username,
-    			password: password,
-    			type: type
-    		});
+  if(errors) {
+   	res.render('users/register', {
+   		errors: errors
+  	});
+  } else{
+  	var  newUser = new User({
+  		email: email,
+    	username: username,
+    	password: password,
+    	type: type
+    });
 
-    		if(type == 'student'){
-    			console.log('Registering Student.....');
-    			var newStudent = new Student({
-    				email: email,
-    				username: username
-    			});
+  if(type == 'student'){
+  	console.log('Registering Student.....');
+  	var newStudent = new Student({
+  			email: email,
+  			username: username
+  	});
 
-    		User.saveStudent(newUser, newStudent,function(err,user){
-    			console.log('Student created');
-    		});
-    		}else{
-    			console.log('Registering Instructor...');
-    			var newInstructor = new Instructor({
-    				email: email,
-    				username: username
-    			});
+  	User.saveStudent(newUser, newStudent,function(err,user){
+  		console.log('Student created');
+  	});
+  	}else{
+  		console.log('Registering Instructor...');
+  		var newInstructor = new Instructor({
+  			email: email,
+  			username: username
+  	});
 
-    		User.saveInstructor(newUser, newInstructor,function(err,user){
-    			console.log('Instructor created');
-    		});
+  	User.saveInstructor(newUser, newInstructor,function(err,user){
+  		console.log('Instructor created');
+  	});
     	}
 
-    	req.flash('success', 'User Added');
-    	res.redirect('/');
+  req.flash('success', 'User Added');
+  res.redirect('/');
 
     }
 });
